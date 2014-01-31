@@ -169,7 +169,7 @@ class GitRepo {
 						$this->bare = false;
 					// Is this a bare repo?
 					} else if (is_file($repo_path."/config")) {
-						if (parse_ini_file($repo_path."/config")['bare']) {
+						if (parse_ini_file($repo_path."/config")) {
 							$this->repo_path = $repo_path;
 							$this->bare = true;
 						}
